@@ -6,26 +6,40 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="style.css">
-    <link rel="script" href="script.js">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="stylesheet" href="./reset.css">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="script" href="./script.js">
     <title>Encriptador</title>
 </head>
 
 <body>
-    <header>
-        <img class="logo" src="./img/guia-cursos-one.png" alt="Logo program ONE">
-    </header>
-
-    <section>
-        <textarea class="area1" cols="30" rows="10"></textarea>
+    <main>
+        <header>
+                <img class="logo" src="./img/logo.png" alt="Logo program ONE">
+        </header>
+    
+        <div class="principal">
+            <section>
+                <textarea class="txtArea1" cols="30 " rows="10" placeholder="Digite seu texto."></textarea>
+                
+                <div class="informacao">
+                    <p>Apenas lestras minusculas e sem acento.</p>
+                </div>
         
-        <button class="btnEncriptografar">Encriptografar</button>
-        <button class="btnDesencriptografar">Desencriptografar</button>
-    </section>
-
-    <section>
-        <textarea class="area2" cols="30" rows="10"></textarea>
-    </section>
+                <div class="botoes">
+                    <button class="btnEncriptografar">Encriptografar</button>
+                    <button class="btnDesencriptografar">Desencriptografar</button>
+                </div>
+            </section>
+        
+            <section>
+                <textarea class="txtArea2" cols="30" rows="10"></textarea>
+                <button class="btnCopiar">Copiar</button>
+            </section>
+        </div>
+    </main>
 </body>
 
 </html>
