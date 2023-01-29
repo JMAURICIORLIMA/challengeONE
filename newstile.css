@@ -1,0 +1,63 @@
+* {
+    font-family: 'Sofia Sans Extra Condensed', sans-serif;
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 100%;
+}
+
+header {
+    background: #82b1b4;
+}
+
+.logo {
+    margin: 10px;
+    border-radius: 120px;
+    padding: 5px;
+    border: 1px solid #81a378;
+    width: 130px;
+}
+
+
+.main {
+    display: flex;
+    background: linear-gradient(#82b1b4, #FEFEFE);
+}
+
+.secao1, .secao2 {
+    margin: 5px 30px 5px 50px;
+}
+
+.txtArea1, .txtArea2 {
+    border: none;
+    border-radius: 20px;
+    padding-top: 15px;
+    padding-left: 10px;
+    text-transform: lowercase;
+    color:  #da8a40;
+    background: rgba(255, 255, 255, 0.733);
+}
+:focus-visible {
+    outline-style: none;
+    border: 1px solid #da8a40;
+}
+
+.txtArea2 {
+    background: url(./img/imagemBoneco.png) center ;
+    background-repeat: no-repeat;
+    border: 5px;
+}
+
+.botoes {
+    display: flex;
+    margin: 10px 5px;
+    padding: 5px;
+}
+
+.btnEncriptografar, .btnDesencriptografar {
+    border-radius: 15px;
+    margin: 5px;
+    padding: 5px;
+    background: #82b1b4;
+    cursor: pointer;
+    width: 200px;
+}

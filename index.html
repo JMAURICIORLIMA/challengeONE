@@ -7,39 +7,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sofia+Sans+Extra+Condensed&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="./reset.css">
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./">
+    <link rel="stylesheet" href="./newstile.css">
     <link rel="script" href="./script.js">
     <title>Encriptador</title>
 </head>
 
 <body>
-    <main>
-        <header>
-                <img class="logo" src="./img/logo.png" alt="Logo program ONE">
-        </header>
-    
-        <div class="principal">
-            <section>
-                <textarea class="txtArea1" cols="30 " rows="10" placeholder="Digite seu texto."></textarea>
-                
-                <div class="informacao">
-                    <p>Apenas lestras minusculas e sem acento.</p>
-                </div>
-        
-                <div class="botoes">
-                    <button class="btnEncriptografar">Encriptografar</button>
-                    <button class="btnDesencriptografar">Desencriptografar</button>
-                </div>
-            </section>
-        
-            <section>
-                <textarea class="txtArea2" cols="30" rows="10"></textarea>
-                <button class="btnCopiar">Copiar</button>
-            </section>
-        </div>
+
+    <header>
+        <img class="logo" src="./img/logo.png" alt="Logo programa ONE">
+    </header>
+
+    <main class="main">
+
+        <section class="secao1">
+            <textarea class="txtArea1" cols="30 " rows="8" placeholder="Digite seu texto."></textarea>
+
+            <div class="informacao">
+                <h6>Apenas lestras minúsculas e sem acento.</h6>
+            </div>
+
+            <div class="botoes">
+                <button class="btnEncriptografar">Encriptografar</button>
+                <button class="btnDesencriptografar">Desencriptografar</button>
+            </div>
+        </section>
+
+        <section class="secao2">
+            <textarea class="txtArea2" cols="20" rows="8"></textarea>
+            <button class="btnCopiar">Copiar</button>
+        </section>
+
     </main>
+
 </body>
 
 </html>
