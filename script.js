@@ -1,5 +1,6 @@
-const txtArea = document.querySelector(".txtArea1");
-const txtSaida = document.querySelector(".txtArea2");
+var txtEntrada = document.querySelector(".txtEntrada");
+var txtSaida = document.querySelector(".txtSaida");
+var txtCopiar = document.querySelector(".txtSaida");
 
 // As "chaves" de criptografia que utilizaremos são:
 // A letra "e" é convertida para "enter"
@@ -8,20 +9,43 @@ const txtSaida = document.querySelector(".txtArea2");
 // A letra "o" é convertida para "ober"
 // A letra "u" é convertida para "ufat"
 
-function btnEncriptografa() {
-    const txtEncriptografado = encriptografa(txtArea.value);
+function btnEncriptografar() {
+    const txtEncriptografado = encriptografar(txtEntrada.value);
     txtSaida.value = txtEncriptografado;
-    txtArea.value = "";
+    txtEntrada.value = "";
 }
 
-function encriptografa (criptografiaArray) {
-    let arrayCodigo = [["e" , "enter"] , ["i" , "imes"] , ["a" , "ai"] , ["o" , "ober"] , ["u" , "ufat"]];
-    criptografiaArray = criptografiaArray.toLowerCase();
+function encriptografar (vogaisTrocadas) {
+    let arrayDeTroca = [["e" , "enter"] , ["i" , "imes"] , ["a" , "ai"] , ["o" , "ober"] , ["u" , "ufat"]];
+    vogaisTrocadas = vogaisTrocadas.toLowerCase();
     
-    for(let i = 0; i < arrayCodigo.length; i++) {
-        if(criptografiaArray.includes(arrayCodigo[i][0])) {
-            criptografiaArray = criptografiaArray.replaceAll(arrayCodigo[i][0], arrayCodigo[i][1]);
+    for(let i = 0; i < arrayDeTroca.length; i++) {
+        if(vogaisTrocadas.includes(arrayDeTroca[i][0])) {
+            vogaisTrocadas = vogaisTrocadas.replaceAll(arrayDeTroca[i][0], arrayDeTroca[i][1]);
         }
     }
-    return criptografiaArray;   
+    return vogaisTrocadas;   
 }
+
+function btnDesencriptografar() {
+    const txtDesencriptografado = desencriptografar(txtEntrada.value);
+    txtSaida.value = txtDesencriptografado;
+    txtEntrada.value = "";
+}
+
+function desencriptografar (codigoTrocado) {
+    let arrayDeTroca = [["e" , "enter"] , ["i" , "imes"] , ["a" , "ai"] , ["o" , "ober"] , ["u" , "ufat"]];
+    codigoTrocado = codigoTrocado.toLowerCase();
+    
+    for(let i = 0; i < arrayDeTroca.length; i++) {
+        if(codigoTrocado.includes(arrayDeTroca[i][1])) {
+            codigoTrocado = codigoTrocado.replaceAll(arrayDeTroca[i][1], arrayDeTroca[i][0]);
+        }
+    }
+    return codigoTrocado;   
+}
+
+// function copiar() {
+//     navigator.clipboard.writeText = (txtCopiar.value);
+//         alert("Texto copiado");
+// }

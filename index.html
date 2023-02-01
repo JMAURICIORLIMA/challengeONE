@@ -10,9 +10,12 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Sofia+Sans+Extra+Condensed&display=swap" rel="stylesheet">
 
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
     <link rel="stylesheet" href="./reset.css">
     <link rel="stylesheet" href="./stile.css">
-    <link rel="script" href="./script.js">
+    <link rel="shortcut icon" href="./img/iconeAlura.jpeg" type="image/x-icon">
 
     <title>Encriptador</title>
 
@@ -27,24 +30,34 @@
     <main class="main">
 
         <section class="secao1">
-            <textarea class="txtArea1" cols="41 " rows="8" placeholder="Digite seu texto."></textarea>
+            <textarea class="txtEntrada" cols="41 " rows="8" placeholder="Digite seu texto."></textarea>
 
             <div class="informacao">
                 <h6>&#9888 Apenas lestras minúsculas e sem acento.</h6>
             </div>
 
             <div class="botoes">
-                <button class="btnEncriptografar" onclick="btnEncriptografa()">Encriptografar</button>
-                <button class="btnDesencriptografar">Desencriptografar</button>
+                <button class="btnEncriptografar" onclick="btnEncriptografar()">Encriptografar</button>
+                <button class="btnDesencriptografar" onclick="btnDesencriptografar()">Desencriptografar</button>
             </div>
         </section>
 
         <section class="secao2">
-            <textarea class="txtArea2" cols="20" rows="8"></textarea>
-            <button class="btnCopiar">Copiar</button>
+            <textarea class="txtSaida" cols="20" rows="8"></textarea>
+            <button class="btnCopiar" onclick="copiar()">Copiar</button>
         </section>
         
     </main>
+
+    <footer class="rodape">
+        <a href=""><ion-icon name="logo-linkedin"></ion-icon></a>
+        <a href=""><ion-icon name="logo-github"></ion-icon></a>
+
+        <h3>&#169; Desenvolvido por José Maurício.</h3>
+    </footer>
+
+    <script src="./script.js"></script>
+
 </body>
 
 </html>
