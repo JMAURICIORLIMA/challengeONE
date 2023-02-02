@@ -10,10 +10,10 @@ header {
 }
 
 .logo {
-    margin: 10px;
+    margin: 10px 0px 10px 40px;
     border-radius: 120px;
     padding: 5px;
-    border: 1px solid #81a378;
+    border: 2px solid #81a378;
     width: 130px;
 }
 
@@ -45,6 +45,13 @@ header {
     background: url(./img/imagemBoneco.png) center ;
     background-repeat: no-repeat;
     border: 5px;
+    text-shadow: #81a378;
+}
+
+.txtSaida:focus {
+    background: none;
+    color: black;
+    border: 1px solid #da8a40;
 }
 
 .botoes {
@@ -82,18 +89,28 @@ header {
     opacity: 0.8;
 }
 
+.secao2,  {
+    display: flex;
+}
 
-.btnCopiar {
+
+.btnCopiar, .btnColar {
     border-radius: 15px;
     margin-right: 5px;
+    margin-top: 5px;
     padding: 5px;
     background: #da8a40;
     cursor: pointer;
     position: relative;
-    width: 200px;
+    width: 100px;
 }
 
-.btnCopiar:hover {
+.btnColar {
+    background-color: #82b1b4;
+}
+
+
+.btnCopiar:hover, .btnColar:hover {
     opacity: 0.8;
 }
 
@@ -101,4 +118,21 @@ header {
     display: flex;
     align-items: center;
     flex-direction: column;
+}
+
+footer {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 100px;
+    padding: 15px;
+}
+
+.redes::selection {
+    color: #da8a40;
+}
+
+h3 {
+    margin: 5px;
+    padding: 5px;
 }

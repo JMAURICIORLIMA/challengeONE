@@ -1,6 +1,8 @@
 var txtEntrada = document.querySelector(".txtEntrada");
 var txtSaida = document.querySelector(".txtSaida");
 var txtCopiar = document.querySelector(".txtSaida");
+let copiar = document.querySelector('.btnCopiar');
+let colar = document.querySelector('.bntColar');
 
 // As "chaves" de criptografia que utilizaremos são:
 // A letra "e" é convertida para "enter"
@@ -15,16 +17,16 @@ function btnEncriptografar() {
     txtEntrada.value = "";
 }
 
-function encriptografar (vogaisTrocadas) {
-    let arrayDeTroca = [["e" , "enter"] , ["i" , "imes"] , ["a" , "ai"] , ["o" , "ober"] , ["u" , "ufat"]];
+function encriptografar(vogaisTrocadas) {
+    let arrayDeTroca = [["e", "enter"], ["i", "imes"], ["a", "ai"], ["o", "ober"], ["u", "ufat"]];
     vogaisTrocadas = vogaisTrocadas.toLowerCase();
-    
-    for(let i = 0; i < arrayDeTroca.length; i++) {
-        if(vogaisTrocadas.includes(arrayDeTroca[i][0])) {
+
+    for (let i = 0; i < arrayDeTroca.length; i++) {
+        if (vogaisTrocadas.includes(arrayDeTroca[i][0])) {
             vogaisTrocadas = vogaisTrocadas.replaceAll(arrayDeTroca[i][0], arrayDeTroca[i][1]);
         }
     }
-    return vogaisTrocadas;   
+    return vogaisTrocadas;
 }
 
 function btnDesencriptografar() {
@@ -33,19 +35,27 @@ function btnDesencriptografar() {
     txtEntrada.value = "";
 }
 
-function desencriptografar (codigoTrocado) {
-    let arrayDeTroca = [["e" , "enter"] , ["i" , "imes"] , ["a" , "ai"] , ["o" , "ober"] , ["u" , "ufat"]];
+function desencriptografar(codigoTrocado) {
+    let arrayDeTroca = [["e", "enter"], ["i", "imes"], ["a", "ai"], ["o", "ober"], ["u", "ufat"]];
     codigoTrocado = codigoTrocado.toLowerCase();
-    
-    for(let i = 0; i < arrayDeTroca.length; i++) {
-        if(codigoTrocado.includes(arrayDeTroca[i][1])) {
+
+    for (let i = 0; i < arrayDeTroca.length; i++) {
+        if (codigoTrocado.includes(arrayDeTroca[i][1])) {
             codigoTrocado = codigoTrocado.replaceAll(arrayDeTroca[i][1], arrayDeTroca[i][0]);
         }
     }
-    return codigoTrocado;   
+    return codigoTrocado;
 }
 
-// function copiar() {
-//     navigator.clipboard.writeText = (txtCopiar.value);
-//         alert("Texto copiado");
-// }
+copiar.addEventListener('click', function(e) {
+  let textArea = document.querySelector('.txtSaida');
+  textArea.select();
+  document.execCommand('copy');
+  alert("Texto copiado.")
+});
+
+colar.addEventListener('click', function(f) {
+    let textArea = document.querySelector('.txtSaida');
+    textArea.select();
+    document.execCommand('paste');
+});
