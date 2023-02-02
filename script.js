@@ -2,7 +2,6 @@ var txtEntrada = document.querySelector(".txtEntrada");
 var txtSaida = document.querySelector(".txtSaida");
 var txtCopiar = document.querySelector(".txtSaida");
 let copiar = document.querySelector('.btnCopiar');
-let colar = document.querySelector('.bntColar');
 
 // As "chaves" de criptografia que utilizaremos são:
 // A letra "e" é convertida para "enter"
@@ -52,10 +51,4 @@ copiar.addEventListener('click', function(e) {
   textArea.select();
   document.execCommand('copy');
   alert("Texto copiado.")
-});
-
-colar.addEventListener('click', function(f) {
-    let textArea = document.querySelector('.txtSaida');
-    textArea.select();
-    document.execCommand('paste');
 });
